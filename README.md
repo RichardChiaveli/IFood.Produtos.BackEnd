@@ -6,7 +6,7 @@ Este é o projeto do WebService principal utilizado pelo IFood.Produtos.FrontEnd
 
 ## Configuração da ConnectionString
 
-Para definir uma Conexão com o Banco de Dados, será necessário acessar o arquivo de configuração <b>appsettings</b> disponível em IFood.Produtos.Application/Infra/Environment
+Para definir uma Conexão com o Banco de Dados, será necessário acessar o arquivo de configuração <b>appsettings</b> disponível em <b>IFood.Produtos.Application/Infra/Environment</b>
 
 ## Inicializando o Banco de Dados via Migrations
 
