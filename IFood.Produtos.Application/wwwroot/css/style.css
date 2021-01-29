@@ -1,0 +1,127 @@
+﻿html {
+    background: #f1f1f1;
+    height: 100%;
+}
+
+body {
+    background: #fff;
+    color: #000;
+    font: 14px 'Segoe UI', tahoma, arial, helvetica, sans-serif;
+    margin: 1%;
+    min-height: 95.5%;
+    border: 1px solid silver;
+    position: relative;
+}
+
+#header {
+    padding: 0;
+}
+
+    #header h1 {
+        font-size: 44px;
+        font-weight: normal;
+        margin: 0;
+        padding: 10px 30px 10px 30px;
+        color: #ff1726;
+        background: no-repeat right url("../img/logo.png");
+        background-size: 100px 100px;
+    }
+
+    #header span {
+        margin: 0;
+        padding: 0 30px;
+        display: block;
+    }
+
+    #header p {
+        font-size: 20px;
+        color: #fff;
+        background: #ff1726;
+        padding: 0 30px;
+        line-height: 50px;
+        margin-top: 25px;
+    }
+
+        #header p a {
+            color: #fff;
+            text-decoration: underline;
+            font-weight: bold;
+            padding-right: 30px;
+            background: no-repeat right bottom url("../img/go.png")
+        }
+
+#main {
+    padding: 5px 30px;
+    clear: both;
+}
+
+.section {
+    width: 21.7%;
+    float: left;
+    margin: 0 0 0 4%;
+}
+
+    .section h2 {
+        font-size: 13px;
+        text-transform: uppercase;
+        margin: 0;
+        border-bottom: 1px solid silver;
+        padding-bottom: 12px;
+        margin-bottom: 8px;
+    }
+
+    .section.first {
+        margin-left: 0;
+    }
+
+        .section.first h2 {
+            font-size: 24px;
+            text-transform: none;
+            margin-bottom: 25px;
+            border: none;
+        }
+
+        .section.first li {
+            border-top: 1px solid silver;
+            padding: 8px 0;
+        }
+
+    .section.last {
+        margin-right: 0;
+    }
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 25px 20px;
+    line-height: 20px;
+}
+
+li {
+    padding: 4px 0;
+}
+
+a {
+    color: #ff1726;
+    text-decoration: none;
+}
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+#footer {
+    clear: both;
+    padding-top: 50px;
+}
+
+    #footer p {
+        position: absolute;
+        bottom: 10px;
+    }
+
+@media screen and (max-width: 598px) {
+    #header h1 {
+        background: no-repeat right bottom url("")
+    }
+}

@@ -1,0 +1,317 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>IFood.Produtos.Application</name>
+    </assembly>
+    <members>
+        <member name="T:IFood.Produtos.Application.Controllers.ProdutoController">
+            <summary>
+            Controller de Operações do Produto
+            </summary>
+        </member>
+        <member name="F:IFood.Produtos.Application.Controllers.ProdutoController._proxy">
+            <summary>
+            Proxy do Serviço
+            </summary>
+        </member>
+        <member name="M:IFood.Produtos.Application.Controllers.ProdutoController.#ctor(IFood.Produtos.Service.ProxyService)">
+            <summary>
+            Construtor
+            </summary>
+            <param name="proxy"></param>
+        </member>
+        <member name="M:IFood.Produtos.Application.Controllers.ProdutoController.Get(IFood.Produtos.Application.Infra.Data.Paging)">
+            <summary>
+            Listagem de Produtos
+            </summary>
+            <param name="paginacao"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IFood.Produtos.Application.Controllers.ProdutoController.Get(System.Guid)">
+            <summary>
+            Detalha o Produto pelo Identificador
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IFood.Produtos.Application.Controllers.ProdutoController.Post(IFood.Produtos.Domain.Dto.InclusaoProdutoRequestDto,Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+            Insere um Produto
+            </summary>
+            <param name="inclusao"></param>
+            <param name="file"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IFood.Produtos.Application.Controllers.ProdutoController.Put(IFood.Produtos.Domain.Dto.AlteracaoProdutoRequestDto,Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+            Altera dados do Produto
+            </summary>
+            <param name="alteracao"></param>
+            <param name="file"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IFood.Produtos.Application.Controllers.ProdutoController.Delete(System.Guid[])">
+            <summary>
+            Deleta um Produto pelo Identificador
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="T:IFood.Produtos.Application.Infra.Data.AppSettings">
+            <summary>
+            Classe das Configurações das Chaves da API
+            </summary>
+        </member>
+        <member name="P:IFood.Produtos.Application.Infra.Data.AppSettings.ConnectionString">
+            <summary>
+            String de Conexão do Banco de Dados
+            </summary>
+        </member>
+        <member name="T:IFood.Produtos.Application.Infra.Data.Error">
+            <summary>
+            Classe de Erro
+            </summary>
+        </member>
+        <member name="M:IFood.Produtos.Application.Infra.Data.Error.#ctor">
+            <summary>
+            Construtor
+            </summary>
+        </member>
+        <member name="M:IFood.Produtos.Application.Infra.Data.Error.#ctor(System.Exception)">
+            <summary>
+            Construtor
+            </summary>
+            <param name="ex"></param>
+        </member>
+        <member name="M:IFood.Produtos.Application.Infra.Data.Error.#ctor(System.String)">
+            <summary>
+            Construtor
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="P:IFood.Produtos.Application.Infra.Data.Error.Message">
+            <summary>
+            Construtor
+            </summary>
+        </member>
+        <member name="T:IFood.Produtos.Application.Infra.Data.Paging">
+            <summary>
+            Classe de Paginação
+            </summary>
+        </member>
+        <member name="P:IFood.Produtos.Application.Infra.Data.Paging.PageIndex">
+            <summary>
+            Indíce da Página
+            </summary>
+        </member>
+        <member name="P:IFood.Produtos.Application.Infra.Data.Paging.PageLimit">
+            <summary>
+            Limite por Página
+            </summary>
+        </member>
+        <member name="T:IFood.Produtos.Application.Infra.Data.Response">
+            <summary>
+            Classe de Reposta Padrão da API
+            </summary>
+        </member>
+        <member name="M:IFood.Produtos.Application.Infra.Data.Response.#ctor(IFood.Produtos.Application.Infra.Data.Error)">
+            <summary>
+            Construtor
+            </summary>
+            <param name="error"></param>
+        </member>
+        <member name="M:IFood.Produtos.Application.Infra.Data.Response.#ctor(System.Boolean)">
+            <summary>
+            Construtor
+            </summary>
+            <param name="success"></param>
+        </member>
+        <member name="M:IFood.Produtos.Application.Infra.Data.Response.#ctor(System.Object)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="P:IFood.Produtos.Application.Infra.Data.Response.Success">
+            <summary>
+            Indica se a Operação deu certo
+            </summary>
+        </member>
+        <member name="P:IFood.Produtos.Application.Infra.Data.Response.Message">
+            <summary>
+            Mensagem de Erro, Alerta ou Aviso
+            </summary>
+        </member>
+        <member name="P:IFood.Produtos.Application.Infra.Data.Response.Data">
+            <summary>
+            Dados a serem Retornados
+            </summary>
+        </member>
+        <member name="T:IFood.Produtos.Application.Infra.Data.Response`1">
+            <summary>
+            Classe de Reposta Padrão da API
+            </summary>
+            <typeparam name="TData"></typeparam>
+        </member>
+        <member name="M:IFood.Produtos.Application.Infra.Data.Response`1.#ctor(IFood.Produtos.Application.Infra.Data.Error)">
+            <summary>
+            Construtor
+            </summary>
+            <param name="error"></param>
+        </member>
+        <member name="M:IFood.Produtos.Application.Infra.Data.Response`1.#ctor(System.Int32,System.Int32,`0)">
+            <summary>
+            Construtor
+            </summary>
+            <param name="pageLimit"></param>
+            <param name="total"></param>
+            <param name="data"></param>
+        </member>
+        <member name="P:IFood.Produtos.Application.Infra.Data.Response`1.Success">
+            <summary>
+            Indica se a Operação deu certo
+            </summary>
+        </member>
+        <member name="P:IFood.Produtos.Application.Infra.Data.Response`1.Message">
+            <summary>
+            Mensagem de Erro, Alerta ou Aviso
+            </summary>
+        </member>
+        <member name="P:IFood.Produtos.Application.Infra.Data.Response`1.PageCount">
+            <summary>
+            Quantidades de Páginas
+            </summary>
+        </member>
+        <member name="P:IFood.Produtos.Application.Infra.Data.Response`1.Total">
+            <summary>
+            Total de Registros
+            </summary>
+        </member>
+        <member name="P:IFood.Produtos.Application.Infra.Data.Response`1.Data">
+            <summary>
+            Dados a serem Retornados
+            </summary>
+        </member>
+        <member name="T:IFood.Produtos.Application.Infra.DI.AppSettingsDi">
+            <summary>
+            Injeção de dependência do AppSettings
+            </summary>
+        </member>
+        <member name="M:IFood.Produtos.Application.Infra.DI.AppSettingsDi.AddAppSettingsDi(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration,IFood.Produtos.Application.Infra.Data.AppSettings@)">
+            <summary>
+            Adiciona o AppSettings na injeção de dependência
+            </summary>
+            <param name="services"></param>
+            <param name="configuration"></param>
+            <param name="appSettings"></param>
+        </member>
+        <member name="T:IFood.Produtos.Application.Infra.DI.ServiceDi">
+            <summary>
+            Injeção de dependência do Serviço
+            </summary>
+        </member>
+        <member name="M:IFood.Produtos.Application.Infra.DI.ServiceDi.AddServiceDi(Microsoft.Extensions.DependencyInjection.IServiceCollection,IFood.Produtos.Application.Infra.Data.AppSettings)">
+            <summary>
+            Adiciona o Serviço na injeção de dependência
+            </summary>
+            <param name="services"></param>
+            <param name="appSettings"></param>
+        </member>
+        <member name="T:IFood.Produtos.Application.Infra.DI.SwaggerDi">
+            <summary>
+            Injeção de dependência do Swagger
+            </summary>
+        </member>
+        <member name="M:IFood.Produtos.Application.Infra.DI.SwaggerDi.AddSwaggerDi(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String)">
+            <summary>
+            Adicionar o Swagger na injeção de dependência
+            </summary>
+            <param name="services"></param>
+            <param name="apiVersion"></param>
+        </member>
+        <member name="T:IFood.Produtos.Application.Infra.DI.SwaggerDi.SwaggerAddEnumDescriptions">
+            <summary>
+            Documentação de Enumeradores no Swagger
+            </summary>
+        </member>
+        <member name="M:IFood.Produtos.Application.Infra.DI.SwaggerDi.SwaggerAddEnumDescriptions.Apply(Microsoft.OpenApi.Models.OpenApiDocument,Swashbuckle.AspNetCore.SwaggerGen.DocumentFilterContext)">
+            <summary>
+            Aplicação da documentação do Enum
+            </summary>
+            <param name="swaggerDoc"></param>
+            <param name="context"></param>
+        </member>
+        <member name="T:IFood.Produtos.Application.Infra.DI.SwaggerDi.SwaggerAddHeaderParams">
+            <summary>
+            Parâmetros Adicionais no Cabeçalho do Swagger
+            </summary>
+        </member>
+        <member name="M:IFood.Produtos.Application.Infra.DI.SwaggerDi.SwaggerAddHeaderParams.Apply(Microsoft.OpenApi.Models.OpenApiOperation,Swashbuckle.AspNetCore.SwaggerGen.OperationFilterContext)">
+            <summary>
+            Aplicação dos parâmetros adicionais
+            </summary>
+            <param name="operation"></param>
+            <param name="context"></param>
+        </member>
+        <member name="M:IFood.Produtos.Application.Infra.DI.SwaggerDi.SwaggerAddHeaderParams.RemoveParametersFromActionName(Swashbuckle.AspNetCore.SwaggerGen.OperationFilterContext,System.Tuple{System.String,System.String[]}[])">
+            <summary>
+            Remoção de Parâmetros do Cabeçalho para uma determinada Ação do Controller informado
+            </summary>
+            <param name="context"></param>
+            <param name="ignore"></param>
+            <returns></returns>
+        </member>
+        <member name="T:IFood.Produtos.Application.Program">
+            <summary>
+            Inicialização da API
+            </summary>
+        </member>
+        <member name="M:IFood.Produtos.Application.Program.Main(System.String[])">
+            <summary>
+            Inicialização da API
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:IFood.Produtos.Application.Program.CreateHostBuilder(System.String[])">
+            <summary>
+            Criação do Host
+            </summary>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="T:IFood.Produtos.Application.Startup">
+            <summary>
+            Classe de configuração e inicialização da API
+            </summary>
+        </member>
+        <member name="P:IFood.Produtos.Application.Startup.Configuration">
+            <summary>
+            Configuração da API
+            </summary>
+        </member>
+        <member name="F:IFood.Produtos.Application.Startup._apiVersion">
+            <summary>
+            Versão do Assembly da API
+            </summary>
+        </member>
+        <member name="M:IFood.Produtos.Application.Startup.#ctor(Microsoft.Extensions.Hosting.IHostEnvironment)">
+            <summary>
+            Inicialização da Configuração da API
+            </summary>
+            <param name="env"></param>
+        </member>
+        <member name="M:IFood.Produtos.Application.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Configurações das Injeções de Dependências dos Serviços
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:IFood.Produtos.Application.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            Configuração do Ambiente e Aplicação da API
+            </summary>
+            <param name="app"></param>
+            <param name="env"></param>
+        </member>
+    </members>
+</doc>
